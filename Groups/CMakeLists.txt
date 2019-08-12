@@ -2,10 +2,12 @@ cmake_minimum_required(VERSION 2.4)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+project(Groups)
+
 ##------------------------------ Celeste ------------------------------##
 
 set(CELESTE_DIR ${PROJECT_SOURCE_DIR}/../CelesteEngine)
-
+message(${CELESTE_DIR})
 #add include directory for Celeste
 INCLUDE_DIRECTORIES(
 	${CELESTE_DIR}/CelesteEngine/Headers
@@ -69,8 +71,6 @@ MACRO(SOURCE_GROUP_BY_FOLDER target)
 ENDMACRO(SOURCE_GROUP_BY_FOLDER)
 
 ##------------------------------ Groups Game Project ------------------------------##
-
-project(Groups)
 
 #limit cmake to only make these configuration types
 set(CMAKE_CONFIGURATION_TYPES "Debug;Release" CACHE STRING "" FORCE)
